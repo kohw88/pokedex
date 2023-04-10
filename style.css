@@ -1,0 +1,215 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	font-family: 'VT323','sans-serif';
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*Layout*/
+header {
+ display: flex;
+}
+
+.search {
+	margin-top: 1.5em;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+	height: 1000px;
+
+	background-image: url(36459174.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-position-y: 0;
+	background-size: 500px;
+}
+
+.suggestions {
+	position: absolute;
+  top: 100%;
+		left: 0;
+  width: 60%;
+  z-index: 2;
+  overflow: auto; /* Add overflow property */
+  max-height: 150px; /* Set a fixed height */
+}
+.suggestions li {
+	background: rgb(238, 232, 232);
+	padding: .25em 0;
+	border-bottom: 1px solid #F4F4F4;
+	list-style: none;
+	opacity: .7;
+}
+
+.suggestions li:last-child {
+	border-bottom: none;
+}
+
+/*Image*/
+.main-logo {
+ margin: 0 auto;
+	padding-top: 5em;
+}
+
+.card-image{
+ width: 200px;
+ border: 1px solid blanchedalmond;
+ border-radius: 10px;
+	background: lightgray;
+
+}
+
+/*font, border color*/
+.card-title{
+	color: #fff;
+	font-size: 1.5em;
+	margin: .25em;
+	background: #000;
+	border-radius: 10px;
+}
+.hl {
+	background: #bef3f3;
+}
+
+
+.card-subtitle {
+	border-radius: 10px;
+	font-size: 1.2em;
+	text-align: center;
+	color: #fff;
+	padding: .25em 0;
+}
+
+
+
+
+/*buttons*/
+#prev-btn{
+	background: none;
+	border: none;
+}
+#prev-btn:hover,
+#pre-btn:focus{
+	color: #c4b745;
+}
+
+#next-btn{
+	background: none;
+	border: none;
+}
+#next-btn:hover,
+#next-btn:focus{
+	color: #c4b745;
+}
+
+/*type-colors*/
+.type-grass{
+	background: #47ab57;
+	outline: 2px solid rgb(50, 116, 50);
+}
+.type-normal{
+	background: #d9d9d9;
+	outline: 2px solid rgb(128, 134, 132);
+}
+.type-fire{
+	background: #ff5a28;
+	outline: 2px solid rgb(255, 38, 0);
+}
+.type-water{
+	background: #4592c4;
+	outline: 2px solid rgb(1, 100, 182);
+}
+.type-bug{
+	background: #719f3f;
+	outline: 2px solid rgb(67, 117, 76);
+}
+.type-electric{
+	background: #eed535;
+	outline: 2px solid rgb(199, 186, 2);
+}
+.type-rock{
+	background: #a38c21;
+	outline: 2px solid rgb(172, 167, 145);
+}
+.type-ghost{
+	background: #7b62a3;
+	outline: 2px solid rgb(56, 2, 143);
+}
+.type-poison{
+	background: #b97fc9;
+	outline: 2px solid rgb(219, 133, 236);
+}
+.type-psychic{
+	background: #f366b9;
+	outline: 2px solid rgb(255, 47, 168);
+}
+.type-fighting{
+	background: #d56723;
+	outline: 2px solid rgb(175, 87, 5);
+}
+.type-ground{
+	background: #ab9842;
+	outline: 2px solid rgb(100, 83, 51);
+}
+.type-dragon{
+	background: #f06d56;
+	outline: 2px solid rgb(241, 119, 48);
+}
+.type-ice{
+	background: #7ccbff;
+	outline: 2px solid rgb(48, 235, 241);
+}
+.type-fairy{
+	background: #f3aef0;
+	outline: 2px solid rgb(165, 252, 255);
+}
