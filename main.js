@@ -135,7 +135,6 @@ fetch(endpoint)
 
 function findMatches(wordToMatch, pokemons) {
   return pokemons.filter(pokemon => {
-    // here we need to figure out if the city or state matches what was searched
     const regex = new RegExp(wordToMatch, 'gi');
     return pokemon.name.match(regex)
   });
