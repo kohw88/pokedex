@@ -3,21 +3,23 @@ const pokedex = document.getElementById('pokemon-display');
 let currentPokemon = 1;
 
 
-const fetchPokemon = (pokemonId) => {
+const fetchPokemon = async (pokemonId) => {
     const url = `https://pokeapi.co/api/v2/pokemon/${pokemonId}/?limit=151`;
 
-    fetch(url)
-        .then((res) => res.json())
-        .then((result) => {
-            const pokemon = {
+    try {
+    const response = await fetch(url);
+    const result = await response.json();
+        const pokemon = {
                 name: result.name.charAt(0).toUpperCase() + result.name.slice(1),
                 image: result.sprites['front_default'],
                 type: result.types.map((type) => type.type.name).join(', '),
                 id: result.id
-            };
+            }
             displayPokemon(pokemon);
 
-        });
+        } catch (error) {
+            console.log(error);
+        }
 };
 
 const displayPokemon = (pokemon) => {
